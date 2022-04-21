@@ -1,13 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Alan from "./Alan";
-import Test from "./Test";
+import Maps from "./Maps";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/alan" element={<Alan />} />       
-        <Route path="/test" element={<Test />} />       
+        <Route path="/alan" element={<Alan />} />
+        <Route path="/map" element={<Maps />} />       
       </Routes>
     </BrowserRouter>
   );
