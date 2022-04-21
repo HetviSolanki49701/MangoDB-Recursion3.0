@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@alan-ai/alan-sdk-web": "^1.8.31",
     "@tensorflow-models/posenet": "^2.2.2",
     "@tensorflow/tfjs": "^3.16.0",
     "@testing-library/jest-dom": "^5.16.4",
