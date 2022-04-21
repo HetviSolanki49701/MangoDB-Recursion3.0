@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Alan from "./Alan";
 import Test from "./Test";
+// import React, { useEffect } from 'react';
 function App() {
   return (
     <BrowserRouter>
