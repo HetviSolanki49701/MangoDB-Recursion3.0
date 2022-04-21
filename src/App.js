@@ -1,11 +1,12 @@
 import "./App.css";
 import Home from "./components/Home/Home";
-import Alan from "./Alan";
 import Test from "./Test";
 import Profile from "./components/Profile/Profile";
-import { BrowserRouter, Route, NavLink, Link, Routes } from "react-router-dom";
+import { BrowserRouter, Route, NavLink, Link, Routes,useNavigate } from "react-router-dom";
 import Excercise from "./components/Excercise/Excercise";
 import Room from "./components/Room/Room";
+import React, { useEffect } from 'react';
+import Alan from "./Alan";
 
 function App() {
   return (

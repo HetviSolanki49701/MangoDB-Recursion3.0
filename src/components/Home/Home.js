@@ -1,12 +1,17 @@
 import "./Home.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import Alan from "../../Alan";
+// import Alan from "../../Alan";
 
 function Home() {
     return (
         <div>
           <Header />
           <div className="wrapper">
+          <div>
+            <Alan />
+          </div>
             <section className="banner bg-1" id="home">
               <div className="container">
                 <div className="row">
