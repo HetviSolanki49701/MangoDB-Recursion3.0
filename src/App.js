@@ -4,7 +4,7 @@ import Alan from "./Alan";
 import Test from "./Test";
 import Profile from "./components/Profile/Profile";
 import { BrowserRouter, Route, NavLink, Link, Routes } from "react-router-dom";
-import Excercise from "./components/Excercise/Excercise";
+import Exercise from "./components/Exercise/Exercise";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/test" element={<Test />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/exercise" element={<Excercise />} />
+        <Route path="/exercise" element={<Exercise />} />
       </Routes>
     </BrowserRouter>
   );

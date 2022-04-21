@@ -49,7 +49,7 @@ function Excercise() {
     drawKeypoints(pose["keypoints"], 0.6, ctx);
     drawSkeleton(pose["keypoints"], 0.7, ctx);
     };
-    
+    /*  */
     runPosenet();
 
   return (
@@ -76,6 +76,35 @@ function Excercise() {
             marginLeft: "auto",
             marginRight: "auto",
             left: 0,
+            right: 0,
+            textAlign: "center",
+            zindex: 9,
+            width: 320,
+            height: 240,
+            }}
+        />
+        <Webcam
+             ref={webcamRef}
+            style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 800,
+                right: 0,
+                textAlign: "center",
+                zindex: 9,
+                width: 320,
+                height: 240,
+            }}
+        />
+
+        <canvas
+            ref={canvasRef}
+            style={{
+            position: "absolute",
+            marginLeft: "auto",
+            marginRight: "auto",
+            left: 800,
             right: 0,
             textAlign: "center",
             zindex: 9,

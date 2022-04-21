@@ -95,19 +95,17 @@ function Home() {
                   <div className="col-lg-4 align-self-center text-center text-lg-right">
                     <div className="feature-item">
                       <div className="content">
-                        <h5>Timeline & History</h5>
+                        <h5>Diet Plans</h5>
                         <p>
-                          Worksheets, class notes and practice through VCare's -
-                          The Fitness App
+                          With the right data, reach your fitness goals faster, get personalized coaching and work with greater efficiency.
                         </p>
                       </div>
                     </div>
                     <div className="feature-item">
                       <div className="content">
-                        <h5>Testing</h5>
+                        <h5>Timeline & History</h5>
                         <p>
-                          Monthly subjective and objective tests covering the full
-                          syllabus and test discussions
+                          Get a feed of your whole day in one single place and receive feedback on your choices.
                         </p>
                       </div>
                     </div>
@@ -128,8 +126,8 @@ function Home() {
                     </div>
                     <div className="feature-item">
                       <div className="content">
-                        <h5>Parent Teacher Meetings</h5>
-                        <p>Mentor feedback and guidance through PTMs</p>
+                        <h5>Blogs</h5>
+                        <p>Coach feedback and guidance through PTMs</p>
                       </div>
                     </div>
                   </div>
@@ -164,11 +162,10 @@ function Home() {
                       <h2
                         className="mb-3"
                       >
-                        Choose Your Subscription Plan
+                        Choose Your Membership Plan
                       </h2>
                       <p>
-                        Get yourself access to the various services we provide, to
-                        build your future with the power of AI.{" "}
+                        Explore Workout Programs, Meal Plans, and Personal Coaches.
                       </p>
                     </div>
                   </div>
