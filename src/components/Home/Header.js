@@ -1,7 +1,21 @@
 import React from "react";
 import "./Header.css";
+import { BrowserRouter, Route, NavLink, useNavigate, Link, Routes } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  function handleclickhome(e) {
+    e.preventDefault();
+    navigate("/home");
+  }
+  function handleclickprofile(e) {
+    e.preventDefault();
+    navigate("/profile");
+  }
+  function handleclickexercise(e) {
+    e.preventDefault();
+    navigate("/exercise");
+  }
     return (
         <div>
           <div className="nav-header">
@@ -24,13 +38,13 @@ function Header() {
                       placeholder="Search"
                       aria-label="Search Dashboard"
                     />
-                    <button className="nav-btn">
+                    <button className="nav-btn" onClick={handleclickhome}>
                       Home
                     </button>
                     <button className="nav-btn">
                       Diet Planner
                     </button>
-                    <button className="nav-btn">
+                    <button className="nav-btn" onClick={handleclickexercise}>
                       Excercise
                     </button>
                     <button className="nav-btn">
@@ -53,7 +67,7 @@ function Header() {
                       data-toggle="dropdown"
                     >
                       <span className="activity active"></span>
-                      <button>
+                      <button onClick={handleclickprofile}>
                         <img src="" height="40" width="40" alt="" />
                       </button>
                     </div>

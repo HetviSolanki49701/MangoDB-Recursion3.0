@@ -13,6 +13,7 @@
     "firebase": "^9.6.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-native-cli": "^2.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-webcam": "^7.0.1",
