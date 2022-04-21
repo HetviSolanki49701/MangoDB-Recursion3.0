@@ -16,6 +16,10 @@ function Header() {
     e.preventDefault();
     navigate("/exercise");
   }
+  function handleclickroom(e) {
+    e.preventDefault();
+    navigate("/room");
+  }
     return (
         <div>
           <div className="nav-header">
@@ -47,7 +51,7 @@ function Header() {
                     <button className="nav-btn" onClick={handleclickexercise}>
                       Excercise
                     </button>
-                    <button className="nav-btn">
+                    <button className="nav-btn"  onClick={handleclickroom}>
                       Fitness Coach
                     </button>
                     <button className="nav-btn">

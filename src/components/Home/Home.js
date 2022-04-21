@@ -1,6 +1,9 @@
 import "./Home.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import features1 from "../../images/features1.png";
+import features2 from "../../images/features1.gif";
+import home from "../../images/home.gif";
 import Alan from "../../Alan";
 import features2 from "../../images/features2.png";
 
@@ -31,7 +34,7 @@ function Home() {
                     <div className="image-block">
                       <img
                         className="img-fluid phone-thumb"
-                        src={features2}
+                        src={home}
                         alt="home-img"
                       />
                     </div>
@@ -47,7 +50,7 @@ function Home() {
                     <div className="image-block">
                       <img
                         className="phone-thumb-md img-fluid"
-                        src={features2}
+                        src={features1}
                         alt="features"
                       />
                     </div>
@@ -125,7 +128,7 @@ function Home() {
                     <div className="app-screen">
                       <img
                         className="img-fluid"
-                        src=""
+                        src={features2}
                         alt="app-screen"
                       />
                     </div>
@@ -142,7 +145,7 @@ function Home() {
                         <h5>Quizzes</h5>
                         <p>
                           Tests, quizzes and worksheets for better practice and
-                          retention.{" "}
+                          retention.
                         </p>
                       </div>
                     </div>
