@@ -1,6 +1,7 @@
 import "./Home.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import features2 from "../../images/features2.png";
 
 function Home() {
     return (
@@ -26,7 +27,7 @@ function Home() {
                     <div className="image-block">
                       <img
                         className="img-fluid phone-thumb"
-                        src=""
+                        src={features2}
                         alt="home-img"
                       />
                     </div>
@@ -42,7 +43,7 @@ function Home() {
                     <div className="image-block">
                       <img
                         className="phone-thumb-md img-fluid"
-                        src=""
+                        src={features2}
                         alt="features"
                       />
                     </div>

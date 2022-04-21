@@ -1,77 +1,96 @@
-import React, { useRef} from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton } from "./utils";
+import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 
 function Excercise() {
-    const webcamRef = useRef(null);
-    const canvasRef = useRef(null);
+  var county = 0;
+  const [isCount, setIsCount] = useState(false);
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+  useEffect(() => {}, [isCount]);
 
-    const runPosenet = async () => {
-        const net = await posenet.load({
-          inputResolution: { width: 320, height: 240 },
-          scale: 0.2,
-        });
-        setInterval(() => {
-          detect(net);
-        }, 16.7);
-      };
+  const runPosenet = async () => {
+    const net = await posenet.load({
+      inputResolution: { width: 320, height: 240 },
+      scale: 0.8,
+    });
+    setInterval(() => {
+      detect(net);
+    }, 16.7);
+  };
 
-    const detect = async (net) => {
+  const detect = async (net) => {
     if (
-        typeof webcamRef.current !== "undefined" &&
-        webcamRef.current !== null &&
-        webcamRef.current.video.readyState === 4
+      typeof webcamRef.current !== "undefined" &&
+      webcamRef.current !== null &&
+      webcamRef.current.video.readyState === 4
     ) {
-        // Get Video Properties
-        const video = webcamRef.current.video;
-        const videoWidth = webcamRef.current.video.videoWidth;
-        const videoHeight = webcamRef.current.video.videoHeight;
+      // Get Video Properties
+      const video = webcamRef.current.video;
+      const videoWidth = webcamRef.current.video.videoWidth;
+      const videoHeight = webcamRef.current.video.videoHeight;
 
-        // Set video width
-        webcamRef.current.video.width = videoWidth;
-        webcamRef.current.video.height = videoHeight;
+      // Set video width
+      webcamRef.current.video.width = videoWidth;
+      webcamRef.current.video.height = videoHeight;
 
-        // Make Detections
-        const pose = await net.estimateSinglePose(video);
-        console.log(pose);
+      // Make Detections
+      const pose = await net.estimateSinglePose(video);
+      console.log(pose);
+      console.log(pose["keypoints"][5]["position"]["x"]);
+      console.log(pose["keypoints"][6]["position"]["x"]);
+      if (
+        pose["keypoints"][5]["position"]["y"] -
+          pose["keypoints"][6]["position"]["y"] <=
+        20 && 
+        pose["keypoints"][5]["position"]["x"] -
+          pose["keypoints"][6]["position"]["x"] <=
+      200
+      ) {
+        console.log("true");
+        county += 1;
+        console.log(county);
+      } else {
+        console.log("false");
+        if(
+          county > 0
+        ){
+          county -= 1;
+        }
+      }
+      if (county == 100) {
+        setIsCount(true);
+        county = 0;
+        console.log("perfect");
+      }
 
-        drawCanvas(pose, video, videoWidth, videoHeight, canvasRef);
+      drawCanvas(pose, video, videoWidth, videoHeight, canvasRef);
     }
-    };
-      
-    const drawCanvas = (pose, video, videoWidth, videoHeight, canvas) => {
+  };
+
+  const drawCanvas = (pose, video, videoWidth, videoHeight, canvas) => {
     const ctx = canvas.current.getContext("2d");
     canvas.current.width = videoWidth;
     canvas.current.height = videoHeight;
 
     drawKeypoints(pose["keypoints"], 0.6, ctx);
     drawSkeleton(pose["keypoints"], 0.7, ctx);
-    };
-    /*  */
-    runPosenet();
+  };
+  /*  */
+  runPosenet();
 
   return (
     <div>
+      <Header />
+      {isCount && <div>You have successfully completed the Yoga</div>}
+      {!isCount && (
         <Webcam
-             ref={webcamRef}
-            style={{
-                position: "absolute",
-                marginLeft: "auto",
-                marginRight: "auto",
-                left: 0,
-                right: 0,
-                textAlign: "center",
-                zindex: 9,
-                width: 320,
-                height: 240,
-            }}
-        />
-
-        <canvas
-            ref={canvasRef}
-            style={{
+          ref={webcamRef}
+          style={{
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
@@ -81,39 +100,42 @@ function Excercise() {
             zindex: 9,
             width: 320,
             height: 240,
-            }}
+          }}
         />
-        <Webcam
-             ref={webcamRef}
-            style={{
-                position: "absolute",
-                marginLeft: "auto",
-                marginRight: "auto",
-                left: 800,
-                right: 0,
-                textAlign: "center",
-                zindex: 9,
-                width: 320,
-                height: 240,
-            }}
-        />
+      )}
 
-        <canvas
-            ref={canvasRef}
-            style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 800,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 320,
-            height: 240,
-            }}
-        />
-  </div>
-  )
+      <Webcam
+        ref={webcamRef}
+        style={{
+          position: "absolute",
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 800,
+          right: 0,
+          textAlign: "center",
+          zindex: 9,
+          width: 320,
+          height: 240,
+        }}
+      />
+
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 800,
+          right: 0,
+          textAlign: "center",
+          zindex: 9,
+          width: 320,
+          height: 240,
+        }}
+      />
+      <Footer />
+    </div>
+  );
 }
 
-export default Excercise
+export default Excercise;

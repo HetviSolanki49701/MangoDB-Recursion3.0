@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Room.css';
 
 const Room = () => {
   return (
-    <div>
+    <div className='whereby'>
       <iframe
         width="1000"
         height="500"
