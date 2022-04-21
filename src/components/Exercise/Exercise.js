@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton } from "./utils";
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
+import './Exercise.css';
 
 function Excercise() {
   var county = 0;
@@ -86,7 +87,7 @@ function Excercise() {
   return (
     <div>
       <Header />
-      {isCount && <div>You have successfully completed the Yoga</div>}
+      {isCount && <div className="success">You have successfully completed the Yoga</div>}
       {!isCount && (
         <Webcam
           ref={webcamRef}
