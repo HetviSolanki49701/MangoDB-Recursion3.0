@@ -4,12 +4,17 @@ import Footer from "./Footer";
 import features1 from "../../images/features1.png";
 import features2 from "../../images/features1.gif";
 import home from "../../images/home.gif";
+import Alan from "../../Alan";
+import features2 from "../../images/features2.png";
 
 function Home() {
     return (
         <div>
           <Header />
           <div className="wrapper">
+          <div>
+            <Alan />
+          </div>
             <section className="banner bg-1" id="home">
               <div className="container">
                 <div className="row">
