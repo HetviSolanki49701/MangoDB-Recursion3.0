@@ -30,16 +30,7 @@ export default function Alan() {
   }
   return (
     <div>
-      <Button
-        sx={{
-          position: "-webkit-sticky",
-          /* Chrome */ position: "sticky",
-          top: "0",
-        }}
-        onClick={click}
-      >
-        Voice Assistant
-      </Button>
+      <Button onClick={click}>Voice Assistant</Button>
     </div>
   );
 }
