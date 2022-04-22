@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
@@ -7,6 +7,7 @@ import Header from "../Home/Header";
 import Footer from "../Home/Footer";
 import './Exercise.css';
 import pose from "../../images/pose-yoga-1.gif"
+import { useNavigate } from "react-router-dom";
 
 function Excercise() {
   var county = 0;
@@ -64,7 +65,7 @@ function Excercise() {
           county -= 1;
         }
       }
-      if (county == 140) {
+      if (county == 100) {
         setIsCount(true);
         county = 0;
         console.log("perfect");
@@ -120,3 +121,4 @@ function Excercise() {
 }
 
 export default Excercise;
+
