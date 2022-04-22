@@ -63,7 +63,7 @@ function Excercise() {
           county -= 1;
         }
       }
-      if (county == 100) {
+      if (county == 140) {
         setIsCount(true);
         county = 0;
         console.log("perfect");
