@@ -17,7 +17,7 @@ function Header() {
   }
   function handleclickexercise(e) {
     e.preventDefault();
-    navigate("/exercise");
+    navigate("/list");
   }
   function handleclickcoach(e) {
     e.preventDefault();
@@ -26,6 +26,14 @@ function Header() {
   function handleclicklogin(e) {
     e.preventDefault();
     navigate("/login");
+  }
+  function handleclickdiet(e) {
+    e.preventDefault();
+    navigate("/diet");
+  }
+  function handleclickgyms(e) {
+    e.preventDefault();
+    navigate("/gyms");
   }
     return (
         <div>
@@ -52,7 +60,7 @@ function Header() {
                     <button className="nav-btn" onClick={handleclickhome}>
                       Home
                     </button>
-                    <button className="nav-btn">
+                    <button className="nav-btn" onClick={handleclickdiet}>
                       Diet Planner
                     </button>
                     <button className="nav-btn" onClick={handleclickexercise}>
@@ -61,8 +69,8 @@ function Header() {
                     <button className="nav-btn"  onClick={handleclickcoach}>
                       Fitness Coach
                     </button>
-                    <button className="nav-btn">
-                      Products
+                    <button className="nav-btn" onClick={handleclickgyms}>
+                      Nearb Gyms
                     </button>
                     <button className="auth-btn" onClick={handleclicklogin}>
                       Log Out
