@@ -17,7 +17,7 @@ function Header() {
   }
   function handleclickexercise(e) {
     e.preventDefault();
-    navigate("/exercise");
+    navigate("/list");
   }
   function handleclickcoach(e) {
     e.preventDefault();
@@ -26,6 +26,10 @@ function Header() {
   function handleclicklogin(e) {
     e.preventDefault();
     navigate("/login");
+  }
+  function handleclickdiet(e) {
+    e.preventDefault();
+    navigate("/diet");
   }
     return (
         <div>
@@ -52,7 +56,7 @@ function Header() {
                     <button className="nav-btn" onClick={handleclickhome}>
                       Home
                     </button>
-                    <button className="nav-btn">
+                    <button className="nav-btn" onClick={handleclickdiet}>
                       Diet Planner
                     </button>
                     <button className="nav-btn" onClick={handleclickexercise}>

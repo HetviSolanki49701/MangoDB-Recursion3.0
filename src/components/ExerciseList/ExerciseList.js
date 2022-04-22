@@ -2,20 +2,21 @@ import React from "react";
 import IndividExe from "./IndividualExe";
 import { HStack, Container } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 
 const Exerciselist = () => {
   const navigate = useNavigate();
-
   return (
     <div>
+      <Header />
       <Container style={{ marginLeft: 300, marginTop: 130 }}>
         <HStack p="20px" w="1000px" spacing={120} style={{ marginBottom: 50 }}>
           <IndividExe
-            exername="Skipping"
+            exername="Tadasana"
             desc="Skipping is important for any cricketer"
             imgURL="http://localhost:3000/assets/skipping.gif"
             className="cards-exercise"
-            route="e1"
           />
 
           <IndividExe
@@ -43,6 +44,7 @@ const Exerciselist = () => {
           />
         </HStack>
       </Container>
+      <Footer />
     </div>
   );
 };

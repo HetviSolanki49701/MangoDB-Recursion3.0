@@ -7,6 +7,7 @@ import Exercise from "./components/Exercise/Exercise";
 import Room from "./components/Room/Room";
 import React, { useEffect } from 'react';
 import Exerciselist from "./components/ExerciseList/ExerciseList";
+import YogaList from "./components/ExerciseList/YogaList";
 import Diet from "./components/Diet/Diet";
 import Coach from "./components/Coach/Coach";
 import Login from "./components/Login/Login";
@@ -19,8 +20,8 @@ function App() {
         <Route path="/alan" element={<Alan />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/exercise" element={<Exercise />} />
-        <Route path="/list" element={<Exerciselist />} />
+        <Route path="/tadasana" element={<Exercise />} />
+        <Route path="/list" element={<YogaList />} />
         <Route path="/diet" element={<Diet />} />
         <Route path="/room" element={<Room />} />
         <Route path="/coach" element={<Coach />} />

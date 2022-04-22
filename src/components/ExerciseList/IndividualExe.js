@@ -13,8 +13,10 @@ import { useNavigate } from "react-router-dom";
 const IndividExe = (props) => {
   const navigate = useNavigate();
 
-  const handleClick1 = () => {
-    // return navigate(`/cricket/${props.route}`);
+  const handleClick1 = (e) => {
+    e.preventDefault();
+    console.log("hello");
+    navigate("/tadasana");
   };
 
   return (
