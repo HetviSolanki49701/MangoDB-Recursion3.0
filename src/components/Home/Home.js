@@ -4,8 +4,8 @@ import Footer from "./Footer";
 import features1 from "../../images/features1.png";
 import features2 from "../../images/features1.gif";
 import home from "../../images/home.gif";
+import news from "../../images/news2.gif";
 import Alan from "../../Alan";
-import features2 from "../../images/features2.png";
 
 function Home() {
     return (
@@ -314,12 +314,12 @@ function Home() {
                 <div className="row bg-elipse-red">
                   <div className="col-lg-4">
                     <div className="image">
-                      <img className="phone-thumb" src="" alt="newsletter" />
+                      <img className="phone-thumb" src={news} alt="newsletter" />
                     </div>
                   </div>
                   <div className="col-lg-8 align-self-center">
                     <div className="content">
-                      <div className="mb-4">
+                      <div className="mb-4 newsletter">
                         <h2>Subscribe To Our Newsletter</h2>
                       </div>
                       <div className="description">

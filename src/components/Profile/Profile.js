@@ -1,6 +1,7 @@
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
 import "./Profile.css";
+import pfp from '../../images/pfp.png'
 
 function Profile() {
   return (
@@ -15,7 +16,7 @@ function Profile() {
                   <div className="media align-items-center mb-4">
                     <img
                       className="mr-3"
-                      src=""
+                      src={pfp}
                       width="80"
                       height="80"
                       alt=""
@@ -145,7 +146,7 @@ function Profile() {
           <div class="row hetviclasshetvi">
             <div class="col-lg-12">
               <div class="card">
-                <div class="card-body">
+                <div class="card-body data-table">
                   <div class="active-member">
                     <div class="table-responsive">
                       <table class="table table-xs mb-0">
