@@ -29,20 +29,14 @@ const Maps = () => {
               res.data.results[i].geometry.location.lng,
             ],
             title: res.data.results[i].name,
-          //   onClick: e => {
-          //     res.data.results[i].photos[0].html_attributions
-          // },
           };
           temp.push(y);
         }
         setMark(!mark)
-        console.log(mark);
-        console.log(temp);
         setMarkers(temp)
       })
       .catch((err) => console.log(err));
   };
-    setTimeout(console.log("HEllo" +temp),10000)
   return (
     <div>
 
