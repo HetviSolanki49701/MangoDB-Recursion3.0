@@ -5,13 +5,14 @@ import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton } from "./utils";
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
+import './Exercise.css';
 
 function Excercise() {
   var county = 0;
   const [isCount, setIsCount] = useState(false);
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-  useEffect(() => {}, [isCount]);
+  useEffect(() => { }, [isCount]);
 
   const runPosenet = async () => {
     const net = await posenet.load({
@@ -45,20 +46,20 @@ function Excercise() {
       console.log(pose["keypoints"][6]["position"]["x"]);
       if (
         pose["keypoints"][5]["position"]["y"] -
-          pose["keypoints"][6]["position"]["y"] <=
-        20 && 
+        pose["keypoints"][6]["position"]["y"] <=
+        20 &&
         pose["keypoints"][5]["position"]["x"] -
-          pose["keypoints"][6]["position"]["x"] <=
-      200
+        pose["keypoints"][6]["position"]["x"] <=
+        200
       ) {
         console.log("true");
         county += 1;
         console.log(county);
       } else {
         console.log("false");
-        if(
+        if (
           county > 0
-        ){
+        ) {
           county -= 1;
         }
       }
@@ -86,53 +87,28 @@ function Excercise() {
   return (
     <div>
       <Header />
-      {isCount && <div>You have successfully completed the Yoga</div>}
+      {isCount && <div className="success">You have successfully completed the Yoga</div>}
       {!isCount && (
-        <Webcam
-          ref={webcamRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 320,
-            height: 240,
-          }}
-        />
+        <div className="cam">
+          <Webcam
+            ref={webcamRef}
+            style={{
+              zindex: 9,
+              width: 320,
+              height: 240,
+            }}
+          />
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              zindex: 9,
+              width: 320,
+              height: 240,
+            }}
+          />
+        </div>
       )}
-
-      <Webcam
-        ref={webcamRef}
-        style={{
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 800,
-          right: 0,
-          textAlign: "center",
-          zindex: 9,
-          width: 320,
-          height: 240,
-        }}
-      />
-
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 800,
-          right: 0,
-          textAlign: "center",
-          zindex: 9,
-          width: 320,
-          height: 240,
-        }}
-      />
       <Footer />
     </div>
   );
