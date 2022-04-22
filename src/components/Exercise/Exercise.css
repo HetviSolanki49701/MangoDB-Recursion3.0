@@ -3,3 +3,7 @@
     align-items: center;
     justify-content: center;
 }
+.cam img {
+    width: 24vwh;
+    height: 42vh;
+}

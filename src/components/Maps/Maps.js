@@ -2,6 +2,8 @@ import React, { useEffect, useState, Component } from "react";
 import Axios from "axios";
 import Map from "mapmyindia-react"
 import { log } from "@tensorflow/tfjs-core/dist/log";
+import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 
 const Maps = () => {
   const [mark, setMark] = useState([false]);
@@ -20,6 +22,7 @@ const Maps = () => {
     });
   },[mark]);
   const sendLocation = () => {
+    console.log(position);
     Axios.post("http://localhost:3001/", position)
       .then((res) => {
         for (var i = 0; i < res.data.results.length; i++) {
@@ -39,12 +42,12 @@ const Maps = () => {
   };
   return (
     <div>
-
+      <Header />
       {!mark? 
-        <Map markers={markers} /> : <button onClick={sendLocation}>Get Gym Location</button>}
+        <Map markers={markers} /> : <button className="btn-main-rounded align-center" onClick={sendLocation}>Get Gym Location</button>}
       
         
-      
+      <Footer />
     </div>
   );
 };
