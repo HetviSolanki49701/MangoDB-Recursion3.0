@@ -1,11 +1,10 @@
 import "./App.css";
 import Home from "./components/Home/Home";
 import Alan from "./Alan";
-import Maps from "./Maps";
-import Test from "./Test";
 import Profile from "./components/Profile/Profile";
+import Maps from "./components/Maps/Maps";
 import { BrowserRouter, Route, NavLink, Link, Routes } from "react-router-dom";
-import Excercise from "./components/Excercise/Excercise";
+import Exercise from "./components/Exercise/Exercise";
 import Room from "./components/Room/Room";
 
 function App() {
@@ -13,11 +12,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/alan" element={<Alan />} />
-        <Route path="/map" element={<Maps />} />       
-        <Route path="/test" element={<Test />} />
+        <Route path="/maps" element={<Maps />} />
+        {/* <Route path="/test" element={<Test />} /> */}
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/exercise" element={<Excercise />} />
+        <Route path="/exercise" element={<Exercise />} />
         <Route path="/room" element={<Room />} />
       </Routes>
     </BrowserRouter>
