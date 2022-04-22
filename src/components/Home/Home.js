@@ -1,12 +1,48 @@
 import "./Home.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import features1 from "../../images/features1.png";
+import features2 from "../../images/features1.gif";
+import home from "../../images/home.gif";
+import news from "../../images/news2.gif";
+import Alan from "../../Alan";
+import { ethers } from "ethers";
+import React, { useState } from "react";
 
 function Home() {
+  const [amount, setAmount] = useState(0.01);
+  const [destinationAddress, setDestinationAddress] = useState(
+    "0x6bf235032fc4a7C05092059A5e92A5f80316237d"
+  );
+  const startPayment = async (event) => {
+    console.log(amount, destinationAddress);
+
+    event.preventDefault();
+
+    try {
+      if (!window.ethereum) {
+        throw new Error("No crypto wallet found. Please install it.");
+      }
+      await window.ethereum.send("eth_requestAccounts");
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      ethers.utils.getAddress(destinationAddress);
+      const transactionResponse = await signer.sendTransaction({
+        to: destinationAddress,
+        value: ethers.utils.parseEther(amount.toString()),
+      });
+      console.log({ transactionResponse });
+    } catch (error) {
+      console.log({ error });
+    }
+  };
     return (
         <div>
           <Header />
           <div className="wrapper">
+          <div>
+            <Alan />
+          </div>
             <section className="banner bg-1" id="home">
               <div className="container">
                 <div className="row">
@@ -19,14 +55,14 @@ function Home() {
                         <span>r</span>
                         <span>e</span>
                       </h1>
-                      <h5>"Choose Life"</h5>
+                      <h5>"Fitness is not a destination. It's a way of life."</h5>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="image-block">
                       <img
                         className="img-fluid phone-thumb"
-                        src=""
+                        src={home}
                         alt="home-img"
                       />
                     </div>
@@ -42,7 +78,7 @@ function Home() {
                     <div className="image-block">
                       <img
                         className="phone-thumb-md img-fluid"
-                        src=""
+                        src={features1}
                         alt="features"
                       />
                     </div>
@@ -97,7 +133,7 @@ function Home() {
                       <div className="content">
                         <h5>Diet Plans</h5>
                         <p>
-                          With the right data, reach your fitness goals faster, get personalized coaching and work with greater efficiency.
+                          With the right data, reach your diet goals faster.
                         </p>
                       </div>
                     </div>
@@ -114,30 +150,29 @@ function Home() {
                     <div className="feature-item mb-0">
                       <div className="content">
                         <h5>Reporting</h5>
-                        <p>Monthly report cards and completion rates</p>
+                        <p>Monthly diet & fitness analysis</p>
                       </div>
                     </div>
                     <div className="app-screen">
                       <img
                         className="img-fluid"
-                        src=""
+                        src={features2}
                         alt="app-screen"
                       />
                     </div>
                     <div className="feature-item">
                       <div className="content">
                         <h5>Blogs</h5>
-                        <p>Coach feedback and guidance through PTMs</p>
+                        <p>Coach feedback and guidance through sessions</p>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4 text-center text-lg-left align-self-center">
                     <div className="feature-item">
                       <div className="content">
-                        <h5>Quizzes</h5>
+                        <h5>Yoga</h5>
                         <p>
-                          Tests, quizzes and worksheets for better practice and
-                          retention.{" "}
+                          Learn to have the correct posture and meditate.
                         </p>
                       </div>
                     </div>
@@ -145,7 +180,7 @@ function Home() {
                       <div className="content">
                         <h5>Visual Fitness </h5>
                         <p>
-                          Learn from engaging & interactive video lessons on app
+                          Learn from interactive video lessons on the website
                         </p>
                       </div>
                     </div>
@@ -182,10 +217,10 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>No Mock Interviews</li>
-                        <li>No Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>No Personal Coach</li>
+                        <li>No Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
@@ -207,14 +242,14 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>Limited Mock Interviews</li>
-                        <li>Limited Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>Personal Coach</li>
+                        <li>No Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
-                          className="btn-main-rounded"
+                          className="btn-main-rounded" onClick={startPayment}
                         >
                           Pay with MetaMask 
                         </button>
@@ -232,14 +267,14 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>Unlimited Mock Interviews</li>
-                        <li>Unlimited Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>Personal Coach</li>
+                        <li>20% Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
-                          className="btn-main-rounded"
+                          className="btn-main-rounded" onClick={startPayment}
                         >
                           Pay with MetaMask
                         </button>
@@ -261,7 +296,7 @@ function Home() {
                         </span>
                         +
                       </h3>
-                      <p>Excercises</p>
+                      <p>Sessions</p>
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -306,12 +341,12 @@ function Home() {
                 <div className="row bg-elipse-red">
                   <div className="col-lg-4">
                     <div className="image">
-                      <img className="phone-thumb" src="" alt="newsletter" />
+                      <img className="phone-thumb" src={news} alt="newsletter" />
                     </div>
                   </div>
                   <div className="col-lg-8 align-self-center">
                     <div className="content">
-                      <div className="mb-4">
+                      <div className="mb-4 newsletter">
                         <h2>Subscribe To Our Newsletter</h2>
                       </div>
                       <div className="description">

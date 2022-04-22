@@ -1,0 +1,15 @@
+.cardProperty {
+  /* box-shadow : 1px, 1px, rgba(0, 0, 0, 0.2); */
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding-right: 300px; */
+  /* margin-bottom: 60px; */
+}
+
+.cardProperty:hover {
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.15, 1.15);
+}
