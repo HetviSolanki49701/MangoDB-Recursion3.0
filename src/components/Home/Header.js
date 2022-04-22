@@ -70,7 +70,7 @@ function Header() {
                       Fitness Coach
                     </button>
                     <button className="nav-btn" onClick={handleclickgyms}>
-                      Nearb Gyms
+                      Nearby Gyms
                     </button>
                     <button className="auth-btn" onClick={handleclicklogin}>
                       Log Out

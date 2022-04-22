@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Input, SimpleGrid } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 
 const Diet = () => {
   const [recipes, setRecipes] = useState([]);
@@ -47,6 +49,7 @@ const Diet = () => {
 
   return (
     <>
+    <Header />
       <Input
         ml="20"
         mr="5"
@@ -59,6 +62,7 @@ const Diet = () => {
         <SearchIcon />
       </button>
       <GetDiet />
+      <Footer />
     </>
   );
 };

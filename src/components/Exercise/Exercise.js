@@ -3,20 +3,10 @@ import * as tf from "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton } from "./utils";
-import {
-  VStack,
-  HStack,
-  Text,
-  Button,
-  Image,
-  Heading,
-  Container,
-  UnorderedList,
-  ListItem,
-} from "@chakra-ui/react";
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
 import './Exercise.css';
+import pose from "../../images/pose-yoga-1.gif"
 import { useNavigate } from "react-router-dom";
 
 function Excercise() {
@@ -28,7 +18,7 @@ function Excercise() {
 
   const runPosenet = async () => {
     const net = await posenet.load({
-      inputResolution: { width: 320, height: 240 },
+      inputResolution: { width: 266, height: 200 },
       scale: 0.8,
     });
     setInterval(() => {
@@ -102,21 +92,25 @@ function Excercise() {
       {isCount && <div className="success">You have successfully completed the Yoga</div>}
       {!isCount && (
         <div className="cam">
+        <img src={pose} alt="" />
           <Webcam
             ref={webcamRef}
             style={{
+              position:" relative",
+              left: 40,
               zindex: 9,
-              width: 320,
-              height: 240,
+              width: 266,
+              height: 200,
             }}
           />
           <canvas
             ref={canvasRef}
             style={{
-              position: "absolute",
+              position: "relative",
+              left: -235,
               zindex: 9,
-              width: 320,
-              height: 240,
+              width: 266,
+              height: 200,
             }}
           />
         </div>
