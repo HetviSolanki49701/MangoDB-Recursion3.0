@@ -5,9 +5,36 @@ import features1 from "../../images/features1.png";
 import features2 from "../../images/features1.gif";
 import home from "../../images/home.gif";
 import Alan from "../../Alan";
-import features2 from "../../images/features2.png";
+import { ethers } from "ethers";
+import React, { useState } from "react";
 
 function Home() {
+  const [amount, setAmount] = useState(0.01);
+  const [destinationAddress, setDestinationAddress] = useState(
+    "0x6bf235032fc4a7C05092059A5e92A5f80316237d"
+  );
+  const startPayment = async (event) => {
+    console.log(amount, destinationAddress);
+
+    event.preventDefault();
+
+    try {
+      if (!window.ethereum) {
+        throw new Error("No crypto wallet found. Please install it.");
+      }
+      await window.ethereum.send("eth_requestAccounts");
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      ethers.utils.getAddress(destinationAddress);
+      const transactionResponse = await signer.sendTransaction({
+        to: destinationAddress,
+        value: ethers.utils.parseEther(amount.toString()),
+      });
+      console.log({ transactionResponse });
+    } catch (error) {
+      console.log({ error });
+    }
+  };
     return (
         <div>
           <Header />
@@ -222,7 +249,7 @@ function Home() {
                       </ul>
                       <div className="action-button">
                         <button
-                          className="btn-main-rounded"
+                          className="btn-main-rounded" onClick={startPayment}
                         >
                           Pay with MetaMask 
                         </button>
@@ -247,7 +274,7 @@ function Home() {
                       </ul>
                       <div className="action-button">
                         <button
-                          className="btn-main-rounded"
+                          className="btn-main-rounded" onClick={startPayment}
                         >
                           Pay with MetaMask
                         </button>
