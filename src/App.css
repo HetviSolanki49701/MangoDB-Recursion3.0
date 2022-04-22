@@ -14649,3 +14649,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 .pricing-table {
   border-radius: 8px;
 }
+
+.alan{
+  position: sticky;
+}

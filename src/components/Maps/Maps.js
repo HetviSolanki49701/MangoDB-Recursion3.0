@@ -4,6 +4,7 @@ import Map from "mapmyindia-react"
 import { log } from "@tensorflow/tfjs-core/dist/log";
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
+import './Maps.css'
 
 const Maps = () => {
   const [mark, setMark] = useState([false]);
@@ -43,10 +44,11 @@ const Maps = () => {
   return (
     <div>
       <Header />
+      <div className="gymsarea">
       {!mark? 
         <Map markers={markers} /> : <button className="btn-main-rounded align-center" onClick={sendLocation}>Get Gym Location</button>}
       
-        
+        </div>
       <Footer />
     </div>
   );

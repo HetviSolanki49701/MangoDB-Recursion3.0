@@ -32,7 +32,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose2} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Utkatasana</h5>
@@ -44,7 +44,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose3} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Paschimottanasana</h5>
@@ -56,7 +56,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose4} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Kumbhakasana</h5>
@@ -74,7 +74,7 @@ function YogaList() {
             <div class="col-12 m-b-30">
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose4} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Tadasana</h5>
@@ -86,7 +86,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose4} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Tadasana</h5>
@@ -98,7 +98,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose4} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Tadasana</h5>
@@ -110,7 +110,7 @@ function YogaList() {
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="card">
+                        <div class="card" onClick={handleclicktadasana}>
                             <img class="img-fluid" src={pose4} alt="" />
                             <div class="card-body">
                                 <h5 class="card-title">Tadasana</h5>
