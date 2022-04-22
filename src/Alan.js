@@ -33,7 +33,7 @@ export default function Alan() {
   return (
     <div>
       <Button onClick={click}>
-        vsugfsiu
+        Voice Assistant
       </Button>
     </div>
   );
