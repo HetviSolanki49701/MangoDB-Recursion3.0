@@ -4,9 +4,9 @@ import Map from "mapmyindia-react"
 import { log } from "@tensorflow/tfjs-core/dist/log";
 
 const Maps = () => {
-  // const [mark, setMark] = useState([]);
+  const [mark, setMark] = useState([false]);
+  const [markers, setMarkers] = useState([]);
   var temp = [];
-  const [flag, setFlag] = useState(false);
   const [position, setPosition] = useState({
     lat: "",
     long: "",
@@ -18,11 +18,10 @@ const Maps = () => {
         long: position.coords.longitude,
       });
     });
-  }, [flag]);
+  },[mark]);
   const sendLocation = () => {
     Axios.post("http://localhost:3001/", position)
       .then((res) => {
-        console.log(res);
         for (var i = 0; i < res.data.results.length; i++) {
           var y = {
             position: [
@@ -30,23 +29,28 @@ const Maps = () => {
               res.data.results[i].geometry.location.lng,
             ],
             title: res.data.results[i].name,
+          //   onClick: e => {
+          //     res.data.results[i].photos[0].html_attributions
+          // },
           };
-          // setMark(oldArray => [...oldArray, y])
           temp.push(y);
-          setFlag(!flag);
-          // console.log(temp);
-          // console.log(mark);
         }
+        setMark(!mark)
+        console.log(mark);
+        console.log(temp);
+        setMarkers(temp)
       })
       .catch((err) => console.log(err));
-    // console.log(temp);
   };
-  //   console.log(mark);
-    console.log(temp);
+    setTimeout(console.log("HEllo" +temp),10000)
   return (
     <div>
-      <Map markers={temp} />
-      <button onClick={sendLocation}>Get Gym Location</button>
+
+      {!mark? 
+        <Map markers={markers} /> : <button onClick={sendLocation}>Get Gym Location</button>}
+      
+        
+      
     </div>
   );
 };

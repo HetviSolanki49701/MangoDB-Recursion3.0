@@ -4,7 +4,6 @@ import { BrowserRouter, Route, NavLink, Link, Routes,useNavigate } from "react-r
 import Alan from "./Alan";
 import Profile from "./components/Profile/Profile";
 import Maps from "./components/Maps/Maps";
-import { BrowserRouter, Route, NavLink, Link, Routes } from "react-router-dom";
 import Exercise from "./components/Exercise/Exercise";
 import Room from "./components/Room/Room";
 import React, { useEffect } from 'react';
@@ -19,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/alan" element={<Alan />} />
-        <Route path="/maps" element={<Maps />} />
+        <Route path="/gyms" element={<Maps />} />
         {/* <Route path="/test" element={<Test />} /> */}
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />

@@ -27,6 +27,10 @@ function Header() {
     e.preventDefault();
     navigate("/login");
   }
+  function handleclickgyms(e) {
+    e.preventDefault();
+    navigate("/gyms");
+  }
     return (
         <div>
           <div className="nav-header">
@@ -61,8 +65,8 @@ function Header() {
                     <button className="nav-btn"  onClick={handleclickcoach}>
                       Fitness Coach
                     </button>
-                    <button className="nav-btn">
-                      Products
+                    <button className="nav-btn" onClick={handleclickgyms}>
+                      Nearb Gyms
                     </button>
                     <button className="auth-btn" onClick={handleclicklogin}>
                       Log Out
