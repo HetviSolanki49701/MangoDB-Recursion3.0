@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.8.31",
+    "@chakra-ui/icon": "^2.0.5",
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

@@ -1,11 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton } from "./utils";
+import {
+  VStack,
+  HStack,
+  Text,
+  Button,
+  Image,
+  Heading,
+  Container,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
 import Header from "../Home/Header";
 import Footer from "../Home/Footer";
 import './Exercise.css';
+import { useNavigate } from "react-router-dom";
 
 function Excercise() {
   var county = 0;
@@ -115,3 +127,4 @@ function Excercise() {
 }
 
 export default Excercise;
+

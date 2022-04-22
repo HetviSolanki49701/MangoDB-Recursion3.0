@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 import Coach from "./components/Coach/Coach";
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/Signup";
+import Exercise1 from "./components/Exercise/Exercise1";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/exercise" element={<Exercise />} />
+        <Route path="/exercise1" element={<Exercise1 />} />
         <Route path="/room" element={<Room />} />
         <Route path="/coach" element={<Coach />} />
         <Route path="/login" element={<Login />} />
