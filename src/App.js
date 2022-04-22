@@ -6,6 +6,8 @@ import Profile from "./components/Profile/Profile";
 import Exercise from "./components/Exercise/Exercise";
 import Room from "./components/Room/Room";
 import React, { useEffect } from 'react';
+import Exerciselist from "./components/ExerciseList/ExerciseList";
+import Diet from "./components/Diet/Diet";
 import Coach from "./components/Coach/Coach";
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/Signup";
@@ -18,6 +20,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/exercise" element={<Exercise />} />
+        <Route path="/list" element={<Exerciselist />} />
+        <Route path="/diet" element={<Diet />} />
         <Route path="/room" element={<Room />} />
         <Route path="/coach" element={<Coach />} />
         <Route path="/login" element={<Login />} />
