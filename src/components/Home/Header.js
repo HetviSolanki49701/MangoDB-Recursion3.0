@@ -2,6 +2,8 @@ import React from "react";
 import "./Header.css";
 import { BrowserRouter, Route, NavLink, useNavigate, Link, Routes } from "react-router-dom";
 import pfp from '../../images/pfp.png'
+import logo from '../../images/logo.png'
+import logo_hori from '../../images/logo-hori.png'
 
 function Header() {
   const navigate = useNavigate();
@@ -30,8 +32,8 @@ function Header() {
           <div className="nav-header">
             <div className="brand-logo">
               <a href="#">
-                <span className="logo-compact">
-                  <img src="" alt="" />
+                <span className="logo-compact"  onClick={handleclickhome}>
+                  <img src={logo_hori} alt="" />
                 </span>
               </a>
             </div>

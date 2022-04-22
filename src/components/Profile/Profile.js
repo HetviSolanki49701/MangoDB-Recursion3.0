@@ -33,7 +33,7 @@ function Profile() {
                         <span className="mb-1 text-primary">
                           <i className="icon-people"></i>
                         </span>
-                        <h3 className="mb-0">280</h3>
+                        <h3 className="mb-0">200</h3>
                         <p className="text-muted px-4">Following</p>
                       </div>
                     </div>
@@ -45,8 +45,8 @@ function Profile() {
                     </div>
                     <div className="col">
                       <div className="card card-profile text-center">
-                        <h3 className="mb-0">200</h3>
-                        <p className="text-muted">Score</p>
+                        <h3 className="mb-0">56/100</h3>
+                        <p className="text-muted">Score this week</p>
                       </div>
                     </div>
                     <div className="col-12 text-center">
@@ -67,7 +67,7 @@ function Profile() {
                     </li>
                     <li>
                       <strong className="text-dark mr-4">Email</strong>{" "}
-                      <span>avish@gmail.com</span>
+                      <span>jay4codes@gmail.com</span>
                     </li>
                   </ul>
                 </div>
@@ -106,25 +106,25 @@ function Profile() {
                             <li>
                               <label>
                                 <input type="checkbox" />
-                                <span>Revise Insertion Sort</span>
+                                <span>Sukhasana for 5 mins</span>
                               </label>
                             </li>
                             <li>
                               <label>
                                 <input type="checkbox" />
-                                <span>Kruskal's Algorithm</span>
+                                <span>Start having Green Tea</span>
                               </label>
                             </li>
                             <li>
                               <label>
                                 <input type="checkbox" />
-                                <span>Classify Data Structures</span>
+                                <span>Session with Coach</span>
                               </label>
                             </li>
                             <li>
                               <label>
                                 <input type="checkbox" />
-                                <span>Implement DEQueue</span>
+                                <span>Jog for 10 mins</span>
                               </label>
                             </li>
                           </ul>
@@ -143,7 +143,7 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div class="row hetviclasshetvi">
+          {/* <div class="row hetviclasshetvi">
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body data-table">
@@ -239,12 +239,10 @@ function Profile() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div classname="footerrrrrrrrrr" style={{transform: 'translate(0%, -270%)'}}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
+import logo_hori from '../../images/logo-hori.png'
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -48,6 +49,7 @@ export default function Login() {
       <div className="login-wrapper flex-full-center">
         <div className="login-box flex-col-full-center">
           <div className="login-text-wrapper">
+            <img src={logo_hori} alt="" />
             <p className="login-text">Login</p>
           </div>
           <form action="submit">

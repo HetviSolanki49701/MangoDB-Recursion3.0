@@ -27,7 +27,7 @@ function Home() {
                         <span>r</span>
                         <span>e</span>
                       </h1>
-                      <h5>"Choose Life"</h5>
+                      <h5>"Fitness is not a destination. It's a way of life."</h5>
                     </div>
                   </div>
                   <div className="col-md-4">
@@ -105,7 +105,7 @@ function Home() {
                       <div className="content">
                         <h5>Diet Plans</h5>
                         <p>
-                          With the right data, reach your fitness goals faster, get personalized coaching and work with greater efficiency.
+                          With the right data, reach your diet goals faster.
                         </p>
                       </div>
                     </div>
@@ -122,7 +122,7 @@ function Home() {
                     <div className="feature-item mb-0">
                       <div className="content">
                         <h5>Reporting</h5>
-                        <p>Monthly report cards and completion rates</p>
+                        <p>Monthly diet & fitness analysis</p>
                       </div>
                     </div>
                     <div className="app-screen">
@@ -135,17 +135,16 @@ function Home() {
                     <div className="feature-item">
                       <div className="content">
                         <h5>Blogs</h5>
-                        <p>Coach feedback and guidance through PTMs</p>
+                        <p>Coach feedback and guidance through sessions</p>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4 text-center text-lg-left align-self-center">
                     <div className="feature-item">
                       <div className="content">
-                        <h5>Quizzes</h5>
+                        <h5>Yoga</h5>
                         <p>
-                          Tests, quizzes and worksheets for better practice and
-                          retention.
+                          Learn to have the correct posture and meditate.
                         </p>
                       </div>
                     </div>
@@ -153,7 +152,7 @@ function Home() {
                       <div className="content">
                         <h5>Visual Fitness </h5>
                         <p>
-                          Learn from engaging & interactive video lessons on app
+                          Learn from interactive video lessons on the website
                         </p>
                       </div>
                     </div>
@@ -190,10 +189,10 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>No Mock Interviews</li>
-                        <li>No Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>No Personal Coach</li>
+                        <li>No Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
@@ -215,10 +214,10 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>Limited Mock Interviews</li>
-                        <li>Limited Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>Personal Coach</li>
+                        <li>No Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
@@ -240,10 +239,10 @@ function Home() {
                         </p>
                       </div>
                       <ul className="feature-list">
-                        <li>Free Lectures</li>
-                        <li>Free Quizzes</li>
-                        <li>Unlimited Mock Interviews</li>
-                        <li>Unlimited Access to symbl.ai</li>
+                        <li>Free Yoga Sessions</li>
+                        <li>Free Diet Plans</li>
+                        <li>Personal Coach</li>
+                        <li>20% Discount on Products</li>
                       </ul>
                       <div className="action-button">
                         <button
@@ -269,7 +268,7 @@ function Home() {
                         </span>
                         +
                       </h3>
-                      <p>Excercises</p>
+                      <p>Sessions</p>
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">

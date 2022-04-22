@@ -5,6 +5,7 @@ import { useAuth } from "../../context/AuthContexts";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import logo_hori from '../../images/logo-hori.png'
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -59,6 +60,7 @@ export default function Login() {
       <div className="login-wrapper flex-full-center">
         <div className="login-box flex-col-full-center">
           <div className="login-text-wrapper">
+            <img src={logo_hori} alt="" />
             <p className="login-text">Sign Up</p>
           </div>
           <form action="submit">
