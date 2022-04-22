@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 import {
   VStack,
   Link,
@@ -16,6 +18,7 @@ const Coach = () => {
   const navigate = useNavigate();
   return (
     <>
+      <Header />
       <VStack p={25} spacing={5}>
       <Heading m>Our Coaches</Heading>
         <HStack spacing={16}>
@@ -88,6 +91,7 @@ const Coach = () => {
         </HStack>
         
       </VStack>
+      <Footer />
     </>
   );
 };
