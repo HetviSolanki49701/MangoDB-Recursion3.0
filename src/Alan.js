@@ -1,9 +1,7 @@
 import alanBtn from "@alan-ai/alan-sdk-web";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Button,
-} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 export default function Alan() {
   const navigate = useNavigate();
@@ -32,9 +30,7 @@ export default function Alan() {
   }
   return (
     <div>
-      <Button onClick={click}>
-        vsugfsiu
-      </Button>
+      <Button onClick={click}>Voice Assistant</Button>
     </div>
   );
 }
