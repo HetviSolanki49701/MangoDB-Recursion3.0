@@ -48,12 +48,7 @@ const Maps = () => {
       {!mark? 
         <Map markers={markers} /> : <button className="btn-main-rounded align-center" onClick={sendLocation}>Get Gym Location</button>}
       
-<<<<<<< HEAD
-         
-      
-=======
         </div>
->>>>>>> 1c1499db8dcd3914c7577b98858dfb22d6f4547a
       <Footer />
     </div>
   );
