@@ -96,7 +96,7 @@ function Excercise() {
           <Webcam
             ref={webcamRef}
             style={{
-              position:" relative",
+              position: "relative",
               left: 40,
               zindex: 9,
               width: 266,
