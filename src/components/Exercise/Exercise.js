@@ -115,6 +115,10 @@ function Excercise() {
           />
         </div>
       )}
+      <p>
+        What is Sukhasana?
+        Sukhasana, also referred to as easy pose, is a yoga asana performed in a seated position. Easy pose aids in opening the hips and aligning the spine, and its simplicity makes it suitable for yogis of all skill levels, including beginners.
+      </p>
       <Footer />
     </div>
   );

@@ -2,8 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 80vw;
+    height: 80vh;
 }
 .cam img {
     width: 24vw;
     height: 42vh;
+}
+
+.success {
+    font-size: 4em;
+    text-align: center;
 }
